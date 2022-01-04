@@ -1,0 +1,26 @@
+$color-grey: dimgrey;
+$color-red: #ba0111;
+$color-white: whitesmoke;
+$color-orange: #cc5500;
+$color-redfox: #64120c;
+$color-gold: #d4af37;
+$background-color: #ddebec;
+$background-dark: #c5d2d3;
+$img-background-color: #afbabb;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: $color-grey;
+    z-index: unset;
+}

@@ -1,0 +1,38 @@
+@import 'config';
+@import '../scss/sites/about';
+@import '../scss/sites/landing';
+@import '../scss/sites/shop';
+@import '../scss/components/button';
+@import '../scss/components/cart';
+@import '../scss/components/footer';
+@import '../scss/components/navigation';
+
+.html,
+body {
+    height: 100%;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    &::-webkit-scrollbar {
+        width: 0.2rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #1e1e24;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-red;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}

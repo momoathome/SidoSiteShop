@@ -1,0 +1,49 @@
+.about-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* grid-template-columns: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows: 2.5fr 0.2fr;
+    grid-template-areas:
+        '. about .'
+        'footer footer footer'; */
+}
+
+.about-grid {
+    //grid-area: about;
+    height: 92vh;
+    flex-grow: 1;
+}
+
+footer {
+    //grid-area: footer;
+    flex-shrink: 0;
+}
+
+.content-section {
+    p {
+        max-width: 100ch;
+    }
+}
+
+.container-about-content {
+    margin: 5rem auto 0 auto;
+    padding: 10ch 20ch;
+    background: url(/Images/Sido2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+
+    p,
+    h2 {
+        color: #e2e1dd;
+    }
+}
+
+.container-text {
+    max-width: 100ch;
+    min-width: 60ch;
+    position: relative;
+    right: 10rem;
+    margin: auto;
+}

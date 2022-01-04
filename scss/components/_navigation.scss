@@ -1,0 +1,68 @@
+.side-buttons {
+    /* background: rgb(130, 135, 136);
+     background: linear-gradient(90deg, rgba(130, 135, 136, 1) 0%, rgba(61, 61, 61, 1) 65%);*/
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.4em;
+    font-weight: lighter;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-red;
+        color: whitesmoke;
+        padding: 0 2.25rem;
+        margin: 0 5rem;
+        text-decoration: none;
+        font-family: cursive;
+        transition: 300ms;
+        border: 1px solid $color-red;
+    }
+
+    li {
+        margin: 0 1.5rem;
+    }
+
+    li a:hover {
+        background-color: $background-color;
+        border: 1px solid $color-red;
+        color: $color-red;
+        .arrow-left,
+        .arrow-right {
+            color: $color-red;
+        }
+    }
+
+    .arrow-left {
+        font-size: 4rem;
+        color: whitesmoke;
+        box-sizing: border-box;
+        padding: 0;
+        margin-bottom: 10px;
+        position: relative;
+        left: -20px;
+        transition: 300ms;
+    }
+
+    .arrow-right {
+        font-size: 4rem;
+        color: whitesmoke;
+        box-sizing: border-box;
+        padding: 0;
+        margin-bottom: 10px;
+        position: relative;
+        right: -20px;
+        transition: 300ms;
+    }
+}

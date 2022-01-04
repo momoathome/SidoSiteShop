@@ -1,0 +1,211 @@
+main {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template: 1fr auto / 1fr auto;
+  /*     grid-template-columns: 1.8fr 0.2fr;
+    grid-template-rows: 1.8fr 0.2fr;
+    grid-template-areas:
+        'shop-items cart'
+        'footer footer';
+ */
+}
+.shopping-cart {
+  //grid-area: cart;
+  //min-width: 5vmin;
+
+  grid-column: 2 / 3;
+}
+.shop-items {
+  //grid-area: shop-items;
+
+  grid-column: 1 / 2;
+}
+.ticket-section {
+  grid-column: 1 / 2;
+}
+footer {
+  //grid-area: footer;
+  grid-column: 1 / 3;
+}
+
+.shop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  transition: 300ms;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadein 1s forwards;
+
+  &:hover {
+    background-color: darken(#ddebec, 2%);
+  }
+}
+
+.shop-item-title {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.shop-item-img {
+  border: 3px solid $img-background-color;
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  transition: 300ms;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.shop-item-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 7px;
+  padding: 5px;
+}
+
+.shop-item-price {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.shop-items {
+  display: grid;
+  gap: 5rem 10rem;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+  justify-content: center;
+  align-content: center;
+  height: auto;
+}
+
+.slider-btn {
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  top: 30px;
+  right: 200px;
+  width: 15ch;
+  height: 2rem;
+  background-color: $background-color;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.btn-merch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+  font-weight: bold;
+  width: 50%;
+  height: 100%;
+  border-right: 2px solid $img-background-color;
+  text-shadow: 0 5px 10px darken(#ddebec, 1%);
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  transition: 300ms;
+
+  &:hover {
+    background-color: darken($img-background-color, 10%);
+  }
+}
+
+.btn-ticket {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bold;
+  padding: 5px;
+  width: 50%;
+  height: 100%;
+  text-shadow: 0 5px 10px darken(#ddebec, 1%);
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  transition: 300ms;
+
+  &:hover {
+    background-color: darken($img-background-color, 10%);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 8 {
+  .shop-items .shop-item:nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.3}s;
+  }
+}
+
+// ----------------------------------------------------------------
+// -----------------------Tour Content-----------------------------
+// ----------------------------------------------------------------
+
+.ticket-section {
+  max-width: 95%;
+  margin: 5rem auto;
+  padding: 3ch 10ch;
+  background-color: $background-dark;
+  border-radius: 20px;
+}
+
+.section-header {
+  font-family: cursive;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.tour-row {
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.tour-item {
+  display: inline-block;
+  padding-right: 0.5em;
+}
+
+.tour-date {
+  color: #555;
+  width: 11%;
+  font-weight: bold;
+}
+
+.tour-city {
+  width: 24%;
+}
+
+.tour-arena {
+  width: 42%;
+}
+
+.tour-btn {
+  max-width: 19%;
+}
